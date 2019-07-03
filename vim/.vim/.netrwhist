@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/rbutler/dotfiles/zsh/.oh-my-zsh'
+let g:netrw_dirhist_2='/Users/rbutler/dev/go/src/github.com/rbutler/morgue/actions'
+let g:netrw_dirhist_3='/Users/rbutler/dev/do/billing/spec/billing/acceptance'
+let g:netrw_dirhist_4='/Users/rbutler/dev/do/billing/lib/billing/models/alpha'
+let g:netrw_dirhist_5='/Users/rbutler/dev/do/billing/lib/billing/models'
+let g:netrw_dirhist_6='/Users/rbutler/dev/do/billing/lib/billing'
+let g:netrw_dirhist_7='/Users/rbutler/dev/do/billing/lib/billing/models'

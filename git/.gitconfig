@@ -1,0 +1,11 @@
+[core]
+	excludesfile = /Users/rbutler/.gitignore_global
+[user]
+	name = Ryan Butler
+	email = butler.ryan@gmail.com
+[push]
+	default = current
+[alias]
+    can = commit --amend --no-edit
+[rebase]
+	autosquash = true

@@ -1,0 +1,24 @@
+Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
+        , borderColor = "black"
+        , border = TopB
+        , bgColor = "black"
+        , fgColor = "grey"
+        -- , position = Top
+        , position = TopW L 100
+		, hideOnStart = False
+        , commands = [  --Run Weather "KMOV" ["-t","<tempC>C","-L","18","-H","25","--normal","orange","--high","red","--low","lightblue"] 36000
+                        Run Network "eth0" ["-L","0","-H","32","--normal","orange","--high","red"] 10
+                        , Run Network "wlp3s7" ["-L","0","-H","32","--normal","orange","--high","red"] 10
+                        , Run Cpu ["-L","3","-H","50","--normal","orange","--high","red"] 10
+                        , Run Memory ["-t","Mem: <usedratio>%"] 10
+                        , Run Swap [] 10
+                        , Run Com "whoami" [] "" 36000
+                        , Run Date "%a %b %_d %Y %H:%M" "date" 100
+                        -- , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+						-- , Run Battery ["BAT0"] 10
+                        , Run StdinReader
+		]
+		-- , sepChar = "%"
+		, alignSep = "}{"
+		, template = "%StdinReader% | %cpu% | %memory% * %swap% | %wlp3s7% }{ <fc=#ee9a00>%date%</fc> | %whoami% "
+}
