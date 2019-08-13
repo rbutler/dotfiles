@@ -109,4 +109,6 @@ if [[ -z $precmd_functions[(r)_direnv_hook] ]]; then
 fi
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
+alias robert-dunning-junior="dunning-service"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
