@@ -108,6 +108,7 @@ if [[ -z $precmd_functions[(r)_direnv_hook] ]]; then
     precmd_functions+=_direnv_hook;
 fi
 export PATH="/usr/local/opt/openssl/bin:$PATH"
+export GOPRIVATE="*.internal.digitalocean.com,github.com/digitalocean"
 
 alias robert-dunning-junior="dunning-service"
 

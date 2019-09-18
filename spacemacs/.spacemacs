@@ -335,6 +335,7 @@ you should place your code here."
         '((sequence "TODO(t)" "PLAYING(p)" "|" "DONE(d)")
           ;;(sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f)")
           ))
+  (which-key-remove-default-unicode-chars)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
