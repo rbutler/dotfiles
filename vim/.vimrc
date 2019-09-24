@@ -35,9 +35,9 @@ call plug#begin('~/.vim/plugged')
   Plug('vitalk/vim-simple-todo')
   Plug('fatih/vim-go')
   Plug('tpope/vim-fugitive')
+  Plug('junegunn/fzf')
+  Plug('junegunn/fzf.vim')
   " Plug('adaszko/intero.vim')
-  Plug '/usr/local/opt/fzf'
-  Plug 'junegunn/fzf.vim'
   "Plug 'junegunn/fzf', { 'do': 'yes \| ./install' }
   "Plug('SirVer/ultisnips')
   " Haskell
@@ -65,7 +65,7 @@ call plug#begin('~/.vim/plugged')
   " non-GitHub repos
   Plug('scrooloose/nerdtree')
   "Trying ctrlp
-  Plug('ctrlpvim/ctrlp.vim')
+  "Plug('ctrlpvim/ctrlp.vim')
   Plug('pangloss/vim-javascript')
 
 " Initialize plugin system
@@ -246,6 +246,7 @@ if executable('ag')
 endif
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
+nnoremap <Leader>p :FZF<CR>
 " for silver searcher
 cnoreabbrev ag Ack
 cnoreabbrev aG Ack
@@ -278,3 +279,15 @@ vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 " 
 "     autocmd FileType haskell nnoremap <silent> <buffer> <LocalLeader>l :call intero#send_line(printf(":load %s", expand("%")))<CR>
 " augroup END
+" An action can be a reference to a function that processes selected lines
+function! s:build_quickfix_list(lines)
+  call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
+  copen
+  cc
+endfunction
+
+let g:fzf_action = {
+  \ 'ctrl-q': function('s:build_quickfix_list'),
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }

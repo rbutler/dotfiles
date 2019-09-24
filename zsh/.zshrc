@@ -94,7 +94,7 @@ bindkey "^[[1;5D" backward-word
 #alias docker-swap="unset ${!DOCKER_*}"
 
 # #For go on ubuntu 16.04
-export CGO_ENABLED=0
+export CGO_ENABLED=1
 export EDITOR='vim'
 
 export NVM_DIR="$HOME/.nvm"
