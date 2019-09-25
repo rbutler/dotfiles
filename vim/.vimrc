@@ -67,6 +67,8 @@ call plug#begin('~/.vim/plugged')
   "Trying ctrlp
   "Plug('ctrlpvim/ctrlp.vim')
   Plug('pangloss/vim-javascript')
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 
 " Initialize plugin system
 call plug#end()
