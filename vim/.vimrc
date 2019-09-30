@@ -30,7 +30,7 @@ call plug#begin('~/.vim/plugged')
   Plug('majutsushi/tagbar')
   Plug('altercation/vim-colors-solarized')
   "Plug('eagletmt/neco-ghc')
-  Plug('Shougo/neocomplete.vim')
+  " Plug('Shougo/neocomplete.vim')
   Plug('pbrisbin/vim-syntax-shakespeare')
   Plug('vitalk/vim-simple-todo')
   Plug('fatih/vim-go')
@@ -68,6 +68,14 @@ call plug#begin('~/.vim/plugged')
   "Plug('ctrlpvim/ctrlp.vim')
   Plug('pangloss/vim-javascript')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  " if has('nvim')
+  "   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  " else
+  "   Plug 'Shougo/deoplete.nvim'
+  "   Plug 'roxma/nvim-yarp'
+  "   Plug 'roxma/vim-hug-neovim-rpc'
+  " endif
+  " let g:deoplete#enable_at_startup = 1
 
 
 " Initialize plugin system
@@ -100,9 +108,9 @@ nmap <C-h> :GhcModType<CR>
 let g:acp_enableAtStartup = 0
 " Use neocomplete.
 " I disabled this one
-let g:neocomplete#enable_at_startup = 0
-let g:neocomplete#enable_auto_select = 0
-let g:neocomplcache_auto_completion_start_length=2
+" let g:neocomplete#enable_at_startup = 0
+" let g:neocomplete#enable_auto_select = 0
+" let g:neocomplcache_auto_completion_start_length=2
 
 " sytastic checkers
 let g:syntastic_javascript_checkers = ['jshint']
@@ -293,3 +301,13 @@ let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
+
+"  HIE
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+map <Leader>lk :call LanguageClient#textDocument_hover()<CR>
+map <Leader>lg :call LanguageClient#textDocument_definition()<CR>
+map <Leader>lr :call LanguageClient#textDocument_rename()<CR>
+map <Leader>lf :call LanguageClient#textDocument_formatting()<CR>
+map <Leader>lb :call LanguageClient#textDocument_references()<CR>
+map <Leader>la :call LanguageClient#textDocument_codeAction()<CR>
+map <Leader>ls :call LanguageClient#textDocument_documentSymbol()<CR>

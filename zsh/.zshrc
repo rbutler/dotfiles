@@ -58,8 +58,16 @@ export PATH="./bin:%HOME/bin:/usr/local/n/versions/node/:$HOME/.rbenv/bin:$HOME/
 # export PATH="$PATH:/usr/local/go/bin"
 
 
+# Go Paths
 export GOPATH=$HOME/dev/go
-export GOROOT=/usr/local/go
+case `uname` in
+  Darwin)
+      export GOROOT=/usr/local/opt/go/libexec
+  ;;
+  Linux)
+    export GOROOT=/usr/local/go
+  ;;
+esac
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
@@ -113,3 +121,4 @@ export GOPRIVATE="*.internal.digitalocean.com,github.com/digitalocean"
 alias robert-dunning-junior="dunning-service"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+

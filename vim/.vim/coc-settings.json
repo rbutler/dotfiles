@@ -1,25 +1,32 @@
-"languageserver": {
-  "haskell": {
-    "command": "hie-wrapper",
-    "rootPatterns": [
-      ".stack.yaml",
-      "cabal.config",
-      "package.yaml"
-    ],
-    "filetypes": [
-      "hs",
-      "lhs",
-      "haskell"
-    ],
-    "initializationOptions": {
-      "languageServerHaskell": {
-        "hlintOn": true
+{
+  "languageserver": {
+    "haskell": {
+      "command": "hie-wrapper",
+      "rootPatterns": [
+        ".stack.yaml",
+        "cabal.config",
+        "package.yaml"
+      ],
+      "filetypes": [
+        "hs",
+        "lhs",
+        "haskell"
+      ],
+      "initializationOptions": {
+        "languageServerHaskell": {
+          "hlintOn": true
+        }
       }
     },
-  },
-  "golang": {
-	"command": "gopls",
-	"rootPatterns": ["go.mod"],
-	"filetypes": ["go"]
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "filetypes": ["go"]
+    },
+    "dhall": {
+      "command": "dhall-lsp-server --log /Users/rbutler/log",
+      "rootPatterns": ["cthulhu.dhall"],
+      "filetypes": ["dhall"]
+    }
   }
 }
