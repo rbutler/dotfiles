@@ -60,14 +60,16 @@ export PATH="./bin:%HOME/bin:/usr/local/n/versions/node/:$HOME/.rbenv/bin:$HOME/
 
 # Go Paths
 export GOPATH=$HOME/dev/go
-case `uname` in
-  Darwin)
-      export GOROOT=/usr/local/opt/go/libexec
-  ;;
-  Linux)
-    export GOROOT=/usr/local/go
-  ;;
-esac
+#case `uname` in
+  #Darwin)
+    #export GOROOT=/usr/local/opt/go/libexec
+    #export GOROOT=/usr/local/go
+  #;;
+  #Linux)
+    #export GOROOT=/usr/local/go
+  #;;
+#esac
+export GOROOT=/usr/local/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
@@ -122,3 +124,4 @@ alias robert-dunning-junior="dunning-service"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+. /Users/rbutler/.nix-profile/etc/profile.d/nix.sh

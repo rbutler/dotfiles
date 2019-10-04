@@ -61,10 +61,11 @@ values."
      git
      markdown
      org
-     lsp
+     ;; lsp
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom
+            shell-default-shell 'multi-term
             shell-default-term-shell "/usr/local/bin/zsh")
      ;; spell-checking
      ;; syntax-checking
@@ -360,3 +361,12 @@ you should place your code here."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(defun bb/setup-term-mode ()
+  (evil-local-set-key 'insert (kbd "C-r") 'bb/send-C-r))
+
+(defun bb/send-C-r ()
+  (interactive)
+  (term-send-raw-string "\C-r"))
+
+(add-hook 'term-mode-hook 'bb/setup-term-mode)
