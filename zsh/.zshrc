@@ -124,4 +124,6 @@ alias robert-dunning-junior="dunning-service"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-. /Users/rbutler/.nix-profile/etc/profile.d/nix.sh
+# . /Users/rbutler/.nix-profile/etc/profile.d/nix.sh
+plugins=(… buffalo)
+autoload -U compinit && compinit
