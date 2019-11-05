@@ -19,6 +19,8 @@ call plug#begin('~/.vim/plugged')
 
 
 "set runtimepath+=$HOME/dein.vim/repos/github.com/Shougo/dein.vim
+  Plug('Yggdroot/indentLine')
+  Plug('vmchale/dhall-vim')
   Plug('wincent/Command-T')
   "Plug('thoughtbot/vim-rspec')
 
@@ -116,7 +118,7 @@ let g:acp_enableAtStartup = 0
 let g:syntastic_javascript_checkers = ['jshint']
 " let g:syntastic_php_checkers = ['php']
 let g:vimwiki_list = [{'path': '~/vimwiki/','path_html': '~/vimwiki_html'}]
-
+nnoremap <Leader>wa :VimwikiAll2HTML<CR>
 " set langmap='q,\\,w,.e,pr,yt,fy,gu,ci,ro,lp,/[,=],aa,os,ed,uf,ig,dh,hj,tk,nl,s\\;,-',\\;z,qx,jc,kv,xb,bn,mm,w\\,,v.,z/,[-,]=,\"Q,<W,>E,PR,YT,FY,GU,CI,RO,LP,?{,+},AA,OS,ED,UF,IG,DH,HJ,TK,NL,S:,_\",:Z,QX,JC,KV,XB,BN,MM,W<,V>,Z?
 "
 " colorscheme Tomorrow-Night
@@ -156,6 +158,8 @@ set wildmode=list:longest,full
 
 "autocmd vimenter * if !argc() | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<CR>
+map <leader>r :NERDTreeFind<cr>
 "let NERDTreeShowHidden=1
 
 " python
@@ -311,3 +315,5 @@ map <Leader>lf :call LanguageClient#textDocument_formatting()<CR>
 map <Leader>lb :call LanguageClient#textDocument_references()<CR>
 map <Leader>la :call LanguageClient#textDocument_codeAction()<CR>
 map <Leader>ls :call LanguageClient#textDocument_documentSymbol()<CR>
+
+set list lcs=tab:\|\ 
