@@ -9,3 +9,9 @@
                   (sequence "[ ](T)" "[-](p)" "[?](m)" "|" "[X](D)")
                   )))
 (setq global-visual-fill-column-mode t)
+
+;;(load-theme 'doom-one-light t)
+;; (load-theme 'doom-solarized-light t)
+
+(setq doom-font (font-spec :family "Consolas" :size 13)
+      doom-variable-pitch-font (font-spec :family "Noto Sans" :size 13))
