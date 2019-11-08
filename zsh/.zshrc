@@ -105,7 +105,7 @@ bindkey "^[[1;5D" backward-word
 
 # #For go on ubuntu 16.04
 export CGO_ENABLED=1
-export EDITOR='vim'
+export EDITOR='nano'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

@@ -8,3 +8,4 @@
                 '((sequence "TODO(t)" "ACTIVE(a)" "|" "DONE(d)")
                   (sequence "[ ](T)" "[-](p)" "[?](m)" "|" "[X](D)")
                   )))
+(setq global-visual-fill-column-mode t)

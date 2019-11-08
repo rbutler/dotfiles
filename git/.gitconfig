@@ -1,5 +1,6 @@
 [core]
 	excludesfile = /Users/rbutler/.gitignore_global
+	editor = nano
 [user]
 	name = Ryan Butler
 	email = butler.ryan@gmail.com
