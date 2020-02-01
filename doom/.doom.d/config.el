@@ -12,11 +12,15 @@
                   )))
 (setq global-visual-fill-column-mode t)
 
+(setq sp-autoinsert-pair nil)
+
 ;;(load-theme 'doom-one-light t)
 ;; (load-theme 'doom-solarized-light t)
 
 (setq doom-font (font-spec :family "Consolas" :size 13)
-      doom-variable-pitch-font (font-spec :family "Noto Sans" :size 13))
+      ;doom-variable-pitch-font (font-spec :family "Noto Sans" :size 13)
+      doom-variable-pitch-font (font-spec :family "Arial" :size 13)
+      )
 (defun my-go-mode-hook ()
   (add-hook 'before-save-hook 'gofmt)
   (map! :leader :desc "godef-jump" "m" "j" #'godef-jump)
