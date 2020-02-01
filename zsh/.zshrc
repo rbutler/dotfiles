@@ -50,6 +50,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
+# plugins=()
 
 # User configuration
 
@@ -125,5 +126,5 @@ alias robert-dunning-junior="dunning-service"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # . /Users/rbutler/.nix-profile/etc/profile.d/nix.sh
-plugins=(… buffalo)
+# plugins=(… buffalo)
 autoload -U compinit && compinit

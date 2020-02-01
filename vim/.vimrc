@@ -192,11 +192,12 @@ let g:UltiSnipsExpandTrigger="<leader>t"
 
 set backspace=indent,eol,start
 "colorscheme peachpuff
-set background=light
+set background=dark
 let g:solarized_termtrans=1 " no background on solarized
 let g:solarized_termcolors=16
 colorscheme solarized
 highlight LineNr ctermfg=darkgrey
+"highlight LineNr ctermfg=lightgrey
 "highlight Visual cterm=none ctermbg=cyan
 "highlight LineNr ctermfg=magenta
 "highlight LineNr ctermfg=cyan

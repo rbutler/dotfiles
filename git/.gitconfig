@@ -1,9 +1,9 @@
 [core]
 	excludesfile = /Users/rbutler/.gitignore_global
-	editor = nano
+	editor = vim
 [user]
 	name = Ryan Butler
-	email = butler.ryan@gmail.com
+	email = 1170939+rbutler@users.noreply.github.com
 [push]
 	default = current
 [alias]

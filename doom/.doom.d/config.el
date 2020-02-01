@@ -2,6 +2,8 @@
 
 ;; Place your private configuration here
 
+;; wrap lines
+(setq-default truncate-lines nil)
 (map! :leader :desc "Treemacs" "z" #'treemacs)
 (after! org
   (setq org-todo-keywords
@@ -15,3 +17,18 @@
 
 (setq doom-font (font-spec :family "Consolas" :size 13)
       doom-variable-pitch-font (font-spec :family "Noto Sans" :size 13))
+(defun my-go-mode-hook ()
+  (add-hook 'before-save-hook 'gofmt)
+  (map! :leader :desc "godef-jump" "m" "j" #'godef-jump)
+  )
+;; (add-hook 'go-mode-hook 'my-go-mode-hook)
+
+(defun arrayify (start end quote)
+    "Turn strings on newlines into a QUOTEd, comma-separated one-liner."
+    (interactive "r\nMQuote: ")
+    (let ((insertion
+           (mapconcat
+            (lambda (x) (format "%s%s%s" quote x quote))
+            (split-string (buffer-substring start end)) ", ")))
+      (delete-region start end)
+      (insert insertion)))
