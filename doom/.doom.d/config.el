@@ -36,3 +36,7 @@
             (split-string (buffer-substring start end)) ", ")))
       (delete-region start end)
       (insert insertion)))
+
+(remove-hook 'org-mode-hook #'auto-fill-mode)
+(remove-hook 'text-mode-hook #'auto-fill-mode)
+(add-hook 'message-mode-hook #'word-wrap-mode)

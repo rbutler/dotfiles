@@ -128,3 +128,5 @@ alias robert-dunning-junior="dunning-service"
 # . /Users/rbutler/.nix-profile/etc/profile.d/nix.sh
 # plugins=(… buffalo)
 autoload -U compinit && compinit
+
+export PATH="$HOME/.cargo/bin:$PATH"
