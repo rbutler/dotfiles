@@ -1,6 +1,8 @@
 ;;; .doom.d/config.el -*- lexical-binding: t; -*-
 
 ;; Place your private configuration here
+;; Speed up emacs
+(setq redisplay-dont-pause t)
 
 ;; wrap lines
 (setq-default truncate-lines nil)
