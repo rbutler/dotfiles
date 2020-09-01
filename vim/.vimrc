@@ -192,7 +192,8 @@ let g:UltiSnipsExpandTrigger="<leader>t"
 
 set backspace=indent,eol,start
 "colorscheme peachpuff
-set background=dark
+"set background=dark
+set background=light
 let g:solarized_termtrans=1 " no background on solarized
 let g:solarized_termcolors=16
 colorscheme solarized
