@@ -8,6 +8,7 @@
 	default = current
 [alias]
     can = commit --amend --no-edit
+    por = pull origin master
 [rebase]
 	autosquash = true
 [url "git@github.com:"]

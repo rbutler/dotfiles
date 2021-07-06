@@ -37,7 +37,8 @@ call plug#begin('~/.vim/plugged')
   Plug('vitalk/vim-simple-todo')
   Plug('fatih/vim-go')
   Plug('tpope/vim-fugitive')
-  Plug('junegunn/fzf')
+  "Plug('junegunn/fzf')
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug('junegunn/fzf.vim')
   " Plug('adaszko/intero.vim')
   "Plug 'junegunn/fzf', { 'do': 'yes \| ./install' }

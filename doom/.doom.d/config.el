@@ -23,6 +23,7 @@
       ;doom-variable-pitch-font (font-spec :family "Noto Sans" :size 13)
       doom-variable-pitch-font (font-spec :family "Arial" :size 13)
       )
+
 (defun my-go-mode-hook ()
   (add-hook 'before-save-hook 'gofmt)
   (map! :leader :desc "godef-jump" "m" "j" #'godef-jump)
@@ -39,6 +40,9 @@
       (delete-region start end)
       (insert insertion)))
 
+;;(remove-hook 'before-save-hook #'+format-buffer-h)
+
 (remove-hook 'org-mode-hook #'auto-fill-mode)
 (remove-hook 'text-mode-hook #'auto-fill-mode)
 (add-hook 'message-mode-hook #'word-wrap-mode)
+;(setq-default flycheck-disabled-checkers ('
